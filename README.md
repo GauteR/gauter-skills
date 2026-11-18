@@ -2,6 +2,16 @@
 
 Agent skills by Gaute Rønningen, shared for reuse by others. Some of the skills come from other people's MIT-licensed projects; see [Credits](#credits).
 
+## Install
+
+With the [`skills`](https://www.skills.sh/) CLI:
+
+```bash
+npx skills add GauteR/gauter-skills
+```
+
+Or manually: copy `skills/<name>/` into your agent's skills directory (for example `.claude/skills/` or `.agents/skills/`).
+
 ## Skills
 
 **Planning**
@@ -148,16 +158,6 @@ The skills that call tools have a `Requirements` section with a hard gate: if a 
 | `wow-forever-macros` | the main spell named as in the English Forever client. |
 | `signature` | bash and `gh`, authenticated |
 | `solve-conflicts` | `git` and something to resolve; the package manager if a lockfile conflicts |
-
-## Install
-
-With the [`skills`](https://www.skills.sh/) CLI:
-
-```bash
-npx skills add GauteR/gauter-skills
-```
-
-Or manually: copy `skills/<name>/` into your agent's skills directory (for example `.claude/skills/` or `.agents/skills/`).
 
 ## Language
 
