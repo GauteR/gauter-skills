@@ -54,7 +54,7 @@ Agent skills by Gaute Rønningen, shared for reuse by others. Some of the skills
 Run it as `gh-plan 210`, `/gh-plan 210`, or paste an issue URL. The skill:
 
 1. Switches to Plan mode and fetches the issue with `gh`, including its body, comments, sub-issues and blocking relations.
-2. Looks for an existing plan in `~/.cursor/plans/` and checks whether it is still valid.
+2. Looks for an existing plan and checks whether it is still valid.
 3. Reads the codebase, answers what it can, and writes a plan draft. The draft contains a plain-language summary, decisions and assumptions, a PR plan of small PRs (~500 lines each, using existing sub-issues), a PR description template, follow-ups and QA steps.
 4. Asks the open questions and **stops**. It writes no code and creates no branches, commits or PRs.
 
