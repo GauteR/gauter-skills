@@ -1,5 +1,5 @@
 ---
-name: plan-review
+name: agent-plan-review
 description: >
   Systematically review an implementation or product plan before development:
   goals alignment, structure, gaps, technical risks, strengths. Uses the
@@ -12,7 +12,7 @@ description: >
   human-plan-review).
 ---
 
-# Plan review
+# Agent plan review
 
 A thorough review of a plan **before** development. The result is a markdown report.
 

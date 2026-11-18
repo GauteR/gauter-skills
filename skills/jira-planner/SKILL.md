@@ -3,7 +3,7 @@ name: jira-planner
 description: >
   Produces a technical plan for a Jira issue as local markdown, from templates:
   a decision map and teach-back before the draft, a stress-test of the draft,
-  then a plan-review → fix loop until no blocking or "should fix before start"
+  then an agent-plan-review → fix loop until no blocking or "should fix before start"
   findings remain, and finally a short paste-ready plan for the issue's Plan
   field. Optionally writes per-PR subtask descriptions, but only when the user
   explicitly asks. Never calls Jira: the user supplies the issue text and pastes
@@ -34,7 +34,7 @@ This skill only reads files and writes local markdown from templates. It does no
 
 - `jira-planner` owns the local plan orchestration and the paste-ready plan text. It writes subtask descriptions **only when the user explicitly asks**.
 - Decision mapping (`wayfinder`), the interview engine (`grilling`), the CONTEXT/ADR step (`domain-modeling`), and the conditional `research`, `codebase-design` and `prototype` are separate skills that live next to this one in this repository. Use them when they are installed. If one is not, do the same work yourself: map the decisions, ask one question at a time with a recommended answer, and record the outcome in the plan.
-- The plan review is a step in the loop. Use the `plan-review` skill (its checklist is `reference.md`) and write the report with [plan-review-template.md](plan-review-template.md), the iteration-aware variant. Do it as a fresh pass over the plan on disk, not from memory of having written it.
+- The plan review is a step in the loop. Use the `agent-plan-review` skill (its checklist is `reference.md`) and write the report with [plan-review-template.md](plan-review-template.md), the iteration-aware variant. Do it as a fresh pass over the plan on disk, not from memory of having written it.
 - If the user only wants a review of an existing plan (no paste-ready plan), do just the review.
 
 **All of steps 1–7 are mandatory.** Do not skip a step, merge steps without finishing the artefact, or replace them with a chat-only report. Step 2a may record a **skip** when the decision map shows that the path is already clear. Teach-back (2b) and stress-test (4) are still required. **Step 8 does not run** unless the user explicitly asks for subtask descriptions after the paste-ready plan.
@@ -253,7 +253,7 @@ See [plan-template.md](plan-template.md): the canonical table and an alternative
 | New modules / seams | `codebase-design` |
 | Cannot be settled on paper | `prototype` |
 | Code review of a diff or PR | `code-review` (not part of this skill) |
-| Reviewing a plan on its own | `plan-review` |
+| Reviewing a plan on its own | `agent-plan-review` |
 | Checking that the developer understands the plan | `human-plan-review` |
 | Signing text that the agent wrote, before it is pasted into Jira or GitHub | `signature` |
 
