@@ -12,7 +12,7 @@ flowchart LR
   way["wayfinder"]
   grill["grilling"]
   dm["domain-modeling"]
-  pr["plan-review"]
+  pr["agent-plan-review"]
   res["research"]
   cd["codebase-design"]
   proto["prototype"]
@@ -44,7 +44,7 @@ flowchart LR
   ghsync["gh-sync"]
   hpr["human-plan-review"]
   hcr["human-code-review"]
-  pr["plan-review"]
+  pr["agent-plan-review"]
   jp["jira-planner"]
   sig["signature"]
 
@@ -75,7 +75,7 @@ flowchart TD
 
   jp["jira-planner: plan from Jira issue text"]
   inside["Inside jira-planner: wayfinder, grilling, domain-modeling"]
-  pr["plan-review: report in the review loop"]
+  pr["agent-plan-review: report in the review loop"]
   paste(["You paste the plan into Jira"])
 
   impl(["Implementation, not a skill"])
@@ -124,7 +124,7 @@ flowchart TD
   s2b["2b. Teach-back: the user confirms"]
   s3["3. Technical draft: plan and snapshot"]
   s4["4. Stress-test the draft"]
-  s5["5. plan-review report, iteration n"]
+  s5["5. agent-plan-review report, iteration n"]
   open{"Anything blocking or should-fix still open?"}
   fix["Fix the plan, then n = n + 1"]
   limit{"n greater than 5?"}
@@ -260,7 +260,7 @@ flowchart LR
   hpr -->|"one of"| git
   hpr -->|"one of"| sha
   hpr -.->|"only if the plan names an issue"| gh
-  pr["plan-review"] --> prin
+  pr["agent-plan-review"] --> prin
   pr -.->|"only if the plan is in a PR"| gh
   sig["signature"] --> bash
   sig --> gh
