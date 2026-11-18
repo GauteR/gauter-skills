@@ -8,9 +8,9 @@ Agent skills by Gaute Rønningen, shared for reuse by others. Some of the skills
 
 | Skill | What it does |
 | --- | --- |
-| [`gh-plan`](skills/gh-plan/SKILL.md) | Turns a GitHub issue into a local Cursor plan, without writing any code. |
-| [`gh-sync`](skills/gh-sync/SKILL.md) | Syncs the active Cursor plan to GitHub: tracking issue, PR sub-issues, follow-ups and blocked-by relations. |
-| [`jira-planner`](skills/jira-planner/SKILL.md) | Writes a technical plan for a Jira issue as local markdown from templates, reviews it in a loop, and produces a short plan to paste into Jira. Never calls Jira. |
+| [`gh-plan`](skills/gh-plan/SKILL.md) | Turns a GitHub issue into a local plan, without writing any code. |
+| [`gh-sync`](skills/gh-sync/SKILL.md) | Syncs the active plan to GitHub: tracking issue, PR sub-issues, follow-ups and blocked-by relations. |
+| [`jira-planner`](skills/jira-planner/SKILL.md) | Writes a technical plan for a Jira issue as local markdown from templates, reviews it in a loop, and produces a short plan to paste into Jira. |
 | [`plan-review`](skills/plan-review/SKILL.md) | Reviews a plan before development against a checklist and writes a markdown report. Changes nothing else. |
 | [`wayfinder`](skills/wayfinder/SKILL.md) | Maps a large effort as decision tickets and resolves them one at a time until the way is clear. |
 | [`grilling`](skills/grilling/SKILL.md) | Interviews you in rounds of questions, each with a recommended answer, until you share an understanding. |
@@ -48,7 +48,7 @@ Run it as `gh-plan 210`, `/gh-plan 210`, or paste an issue URL. The skill:
 
 Answer the questions to refine the plan, or say **Build** to leave the skill. On Build, run `gh-sync` before you implement.
 
-Requires an authenticated [GitHub CLI](https://cli.github.com/). Plan mode and `~/.cursor/plans/` are Cursor concepts. The skill is written for Cursor.
+Requires an authenticated [GitHub CLI](https://cli.github.com/).
 
 ### gh-sync
 
